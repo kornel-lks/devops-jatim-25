@@ -1,15 +1,14 @@
 {
-  // FILL IN THE MISSING VALUES BELOW
   "family": "",
   "taskRoleArn": "",
   "executionRoleArn": "",
   "networkMode": "",
-  "requiresCompatibilities": ???,
+  "requiresCompatibilities": [
+    "FARGATE"
+  ],
   "cpu": "",
   "memory": "",
   "volumes": [],
-  // FILL IN THE MISSING VALUES ABOVE
-
   "placementConstraints": [],
   "runtimePlatform": {
     "cpuArchitecture": "X86_64",
@@ -25,24 +24,21 @@
       "essential": true,
       "volumesFrom": [],
       "systemControls": [],
-
-      // FILL IN THE MISSING VALUES BELOW
       "portMappings": [],
       "secrets": [],
       "environment": [],
       "mountPoints": [],
       "logConfiguration": {
-        "logDriver": "???",
+        "logDriver": "awslogs",
         "options": {
-          "awslogs-group": "???",
-          "awslogs-region": "???",
+          "awslogs-group": "/ecs/lks/leantime-app",
+          "awslogs-region": "us-east-1",
           "mode": "non-blocking",
           "awslogs-create-group": "true",
           "max-buffer-size": "25m",
           "awslogs-stream-prefix": "ecs"
         }
       }
-      // FILL IN THE MISSING VALUES ABOVE
     }
   ]
 }
